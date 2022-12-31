@@ -27,8 +27,8 @@ const Pad: FC<PadProps> = ({id, src}) => {
     }
     
     return (
-        <div className="drum-pad border-2 rounded-md px-6 py-3" id={id} onClick={handleInput}>
-            {id}
+        <div className=" drum-pad drop-shadow-xl rounded-md w-16 h-12 bg-gray-400" id={id} onClick={handleInput}>
+            <p className="mt-2 font-semibold text-lg text-white">{id}</p>
             <audio id={id} className="clip" ref={audioRef} src={src} onClick={handleInput} />
         </div>
     )
