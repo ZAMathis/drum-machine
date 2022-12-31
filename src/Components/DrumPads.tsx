@@ -3,7 +3,7 @@ import Pad from "./Pad"
 export default function DrumPads() {
     
     return (
-        <>
+        <div className="flex">
             <Pad id="Q" src='/audio/Heater-3.mp3'/>
             <Pad id="W" src='/audio/Heater-4.mp3'/>
             <Pad id="E" src='/audio/Heater-1.mp3'/>
@@ -13,7 +13,7 @@ export default function DrumPads() {
             <Pad id="Z" src='/audio/kicknhat.mp3'/>
             <Pad id="X" src='/audio/kicknhat.mp3'/>
             <Pad id="C" src='/audio/kicknhat.mp3'/>
-        </>
+        </div>
     )
 }
 
