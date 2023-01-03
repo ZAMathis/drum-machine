@@ -1,12 +1,14 @@
 import { PadProps } from "../Interfaces"
 import React, { FC, useEffect } from "react"
 
-const Pad: FC<PadProps> = ({id, src}) => {
-    
+const Pad: FC<PadProps> = ({id, src, setKeyPress}) => {
+    const formattedSrc = src.slice(7);
+
     useEffect(() => {
         const onKeyDown = (event: any) => {
             if (event.key.toUpperCase() === id) {
-                handleInput()
+                handleInput();
+                setKeyPress(formattedSrc);
             }
         }
 

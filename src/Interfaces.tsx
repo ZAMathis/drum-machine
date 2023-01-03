@@ -7,4 +7,14 @@ export interface DisplayProps {
 export interface PadProps extends React.HTMLProps<HTMLAudioElement> {
     id: string;
     src: string;
+    setKeyPress: any;
+}
+
+export interface DrumPadProps {
+    setKeyPress: any;
+}
+
+export interface PowerButtonProps {
+    isOn: boolean;
+    setIsOn: any;
 }
