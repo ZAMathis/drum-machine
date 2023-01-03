@@ -2,8 +2,8 @@ import { PadProps } from "../Interfaces"
 import React, { FC, useEffect } from "react"
 
 const Pad: FC<PadProps> = ({id, src, setKeyPress}) => {
+    const audioRef = React.useRef<HTMLAudioElement>(null);
     const formattedSrc = src.slice(7);
-
 
     useEffect(() => {
         const onKeyDown = (event: any) => {
@@ -20,7 +20,11 @@ const Pad: FC<PadProps> = ({id, src, setKeyPress}) => {
         }
     }, [id])
 
-    const audioRef = React.useRef<HTMLAudioElement>(null);
+    const setVolume = (volume: number) => {
+        if (audioRef.current) {
+            audioRef.current.volume = volume;
+        }
+    }
 
     const handleInput = () => {
         if(audioRef.current) {
