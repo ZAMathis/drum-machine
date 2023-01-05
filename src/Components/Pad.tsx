@@ -1,11 +1,13 @@
 import { PadProps } from "../Interfaces"
 import React, { FC, useEffect } from "react"
 
-const Pad: FC<PadProps> = ({id, src, setKeyPress}) => {
+const Pad: FC<PadProps> = ({id, src, setKeyPress, volume}) => {
     const audioRef = React.useRef<HTMLAudioElement>(null);
     const formattedSrc = src.slice(7);
 
     useEffect(() => {
+        setVolume(volume);
+
         const onKeyDown = (event: any) => {
             if (event.key.toUpperCase() === id) {
                 handleInput();
@@ -18,7 +20,7 @@ const Pad: FC<PadProps> = ({id, src, setKeyPress}) => {
         return () => {
             document.removeEventListener('keydown', onKeyDown)
         }
-    }, [id])
+    }, [id, volume])
 
     const setVolume = (volume: number) => {
         if (audioRef.current) {
