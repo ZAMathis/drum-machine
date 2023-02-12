@@ -6,7 +6,17 @@ const DrumPads: FC<DrumPadProps> = ({setKeyPress, isOn, volume}) => {
     
     if (isOn) {
         return (
-            <div className=" mx-6 my-1 py-12 px-4 grid grid-cols-3 gap-4 w-[275px] bg-slate-500 rounded-lg">
+            <div className="
+            mx-6 
+            my-1 
+            py-12 
+            px-4 
+            grid 
+            grid-cols-3 
+            gap-4 
+            w-[275px] 
+            bg-slate-500 
+            rounded-lg">
                 <Pad id="Q" src='/audio/Heater-1.mp3' setKeyPress={setKeyPress} volume={volume} />
                 <Pad id="W" src='/audio/Heater-2.mp3' setKeyPress={setKeyPress} volume={volume} />
                 <Pad id="E" src='/audio/Heater-4.mp3' setKeyPress={setKeyPress} volume={volume} />
@@ -20,7 +30,17 @@ const DrumPads: FC<DrumPadProps> = ({setKeyPress, isOn, volume}) => {
         )
     } else {
         return (
-            <div className=" mx-6 my-1 py-12 px-4 grid grid-cols-3 gap-4 w-[275px] bg-slate-500 rounded-lg">
+            <div className="
+            mx-6 
+            my-1 
+            py-12 
+            px-4 
+            grid 
+            grid-cols-3 
+            gap-4 
+            w-[275px] 
+            bg-slate-500 
+            rounded-lg">
                 <Pad id="Q" src='' setKeyPress={setKeyPress} volume={volume} />
                 <Pad id="W" src='' setKeyPress={setKeyPress} volume={volume} />
                 <Pad id="E" src='' setKeyPress={setKeyPress} volume={volume} />
